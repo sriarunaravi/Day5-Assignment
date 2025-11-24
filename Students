@@ -1,0 +1,25 @@
+package Automation;
+
+class Student {
+	int id;
+	String name;
+	float marks;
+	   public Student(int id, String name, float marks) {
+	        this.id = id;
+	        this.name = name;
+	        this.marks = marks;
+	    }
+	   public class Main {	
+public static void main(String[] args) {
+	
+	     
+	        Student student1 = new Student(1, "John Doe", 100);
+	        Student student2 = new Student(2, "Jane Smith", 90);
+
+	      
+	        System.out.println(student1); 
+	        System.out.println(student2);
+	    }
+	}
+
+	}
