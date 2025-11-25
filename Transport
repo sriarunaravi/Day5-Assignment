@@ -1,0 +1,27 @@
+package testing;
+class Transports{
+	String type;
+	String brand;
+	String colour;
+	  public Transports(String type, String brand, String colour) {
+	        this.type = type;
+	        this.brand = brand;
+	        this.colour = colour;
+	    }
+	   public void displayDetails() {
+	        System.out.println("Transport Details:");
+	        System.out.println("Type: " + type);
+	        System.out.println("Brand: " + brand);
+	        System.out.println("Colour: " + colour);
+	    }
+}
+
+public class Transport {
+
+	public static void main(String[] args) {
+		Transports trans=new Transports("car","Hyundai","Grey");
+		trans.displayDetails();
+
+	}
+
+}
