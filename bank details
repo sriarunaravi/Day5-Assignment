@@ -1,0 +1,51 @@
+package testing;
+class Account{
+	String accountholdername;
+	double balance;
+	 public Account(String accountholdername, double balance) {
+	        this.accountholdername = accountholdername;
+	        this.balance = balance;
+	    }
+	 public void deposit(double amount){
+		 if(amount>0) {
+			 balance=balance+amount;
+			 System.out.println("Deposited Amount:"+amount);
+			 
+		 }
+		 else {
+			 System.out.println("Deposit valid amount");
+		 }
+	 }
+	 public void withdraw(double amount) {
+		 if(amount>0) {
+			  if (balance >= amount) {
+			 balance=balance-amount;
+			 System.out.println("The withdrawal amount is:"+amount);
+			 
+		 }
+		 else {
+			 System.out.println("Insufficient amount");
+		 }
+		 }
+		 else {
+				  System.out.println("Withdrawal amount must be valid ");
+				 
+			  }
+	 }
+	 public void checkBalance() {
+	        System.out.println("Current balance:" + balance);
+	    }
+	}
+
+public class Accountsimulator {
+
+	public static void main(String[] args) {
+		Account acc=new Account("ABCD",500000);	
+		acc.checkBalance();
+		acc.deposit(5000);
+		acc.withdraw(600000);
+		acc.checkBalance();
+
+	}
+
+}
